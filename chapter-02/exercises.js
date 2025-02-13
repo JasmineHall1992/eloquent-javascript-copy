@@ -26,9 +26,18 @@ LOGS =>
 
 */
 
-function triangles() {
-  
+function triangles(levels = 7) { // Default value in case no input is given
+  if (typeof levels !== "number" || levels < 1) {
+    console.log("Please provide a positive number.");
+    return;
+  }
+
+  for (let i = 1; i <= levels; i++) {
+    console.log("#".repeat(i));
+  }
 }
+
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -47,9 +56,20 @@ on the number:
   - if the number is not divisible by 3 or 5, log the number
 */
 
-function fizzBuzz(start, end) {
-  
+function fizzBuzz() {
+  for (let i = 1; i <= 15; i++) {
+    if (i % 3 === 0 && i % 5 === 0) {
+      console.log("FizzBuzz");
+    } else if (i % 3 === 0) {
+      console.log("Fizz");
+    } else if (i % 5 === 0) {
+      console.log("Buzz");
+    } else {
+      console.log(i);
+    }
+  }
 }
+
 
 ////////////////////////////////////////////////////////////////////////////////
 // drawChessboard //////////////////////////////////////////////////////////////
