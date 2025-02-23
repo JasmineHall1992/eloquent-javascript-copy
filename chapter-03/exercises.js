@@ -37,9 +37,21 @@ function countChars() {
 ////////////////////////////////////////////////////////////////////////////////
 // countBs /////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function countBs() {
-
+//I: string
+//O: number that indicates how many uppercase B characters are in the string
+//Notes: we can iterate through the string with a for loop
+function countBs(string) {
+  //make an empty holder variable
+  let count = 0
+  //loop through each character in the string
+  for (let i = 0; i < string.length; i++){
+    //if the current character in the string equals B, then increment the count to the next xharacter 
+    if (string[i] === "B"){
+        count++;
+    }
+    //return the total count of B characters
+    return count;
+  }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
