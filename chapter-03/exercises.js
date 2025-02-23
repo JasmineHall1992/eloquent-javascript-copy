@@ -29,8 +29,17 @@ function isEven(number) {
 ////////////////////////////////////////////////////////////////////////////////
 // countChars //////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////
-
-function countChars() {
+//I: string, character
+//O: the amount of times the character is found in the string
+function countChars(string, char) {
+  let count = 0;
+  //loop through the string
+  for (let i = 0; i < string.length; i++){
+    if (string[i].includes(char)){
+      count++
+    }
+  }
+  return count;
 
 }
 
@@ -50,8 +59,8 @@ function countBs(string) {
         count++;
     }
     //return the total count of B characters
-    return count;
   }
+  return count;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
